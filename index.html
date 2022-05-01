@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
- 
-
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <title>Creative Minds</title>
 </head>
 <body>
@@ -24,7 +23,7 @@
         <div class="container">
           
             <header class="Header">
-               
+                <div id="google_translate_element" class="google-translate"></div>
             </header>
 
             <div class="content">
@@ -36,7 +35,13 @@
         </div>
     </div>  
     
-    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en',                                         
+         includedLanguages:'en,nl', }, 'google_translate_element');
+        }
+        </script>
+
 </body>
         
      
