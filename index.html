@@ -13,7 +13,7 @@
         <div class="sidebar">
             <div class="SidebarHeader-logo"><a href=""><img src="image/logo.jpeg" alt=""></a></div>
             <div class="Sidebar_menu">
-                <div class="sidebar_item">Introduction</div>
+                <div class="sidebar_item" id="duplicate">Introduction</div>
                 <div class="sidebar_item">Logo</div>
                 <div class="sidebar_item">Typography</div>
                 <div class="sidebar_item">Color palette</div>
@@ -24,6 +24,8 @@
           
             <header class="Header">
                 <div id="google_translate_element" class="google-translate"></div>
+                <input type="button" id="copy" value="Make Copy" onclick="copy()">
+                <button onclick="myFunction()">Remove</button>
             </header>
 
             <div class="content">
@@ -42,6 +44,7 @@
         }
         </script>
 
+        <script src="main.js"></script>
 </body>
         
      
