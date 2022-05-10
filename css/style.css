@@ -1,8 +1,10 @@
 
 body{
     margin: 0;
-    position: relative;
-    
+    background-color: #0c161c;
+    margin: 0; height: auto;
+    width: 100%;
+
 }
 
 
@@ -17,11 +19,15 @@ body{
     display: block;
     width: 16.667vw;
     height: 100vh;
+    position: fixed ;
     border-right: 1px solid #000000;
+    color: #fff;
+    
 }
 
 .SidebarHeader-logo{
     border-bottom: 1px solid #000000;
+   
 }
 
 .SidebarHeader-logo img{
@@ -42,12 +48,12 @@ body{
 }
 .container{
     display: grid;
-    grid-column: 2/-1;
+    grid-column: 3/-1;
 }
 
 .Header{
     display: grid;
-    grid-column: 2/-1;
+    grid-column: 3s/-1;
     height: 128px;
     border-bottom: 1px solid #000000;
 }
@@ -69,3 +75,38 @@ body{
     
 }
 
+p {
+    color: #6d7377;
+    font-size: 1.125rem;
+    font-family: Graphik,Helvetica,Arial,sans-serif;
+    line-height: 1.6111111111;
+}
+
+h1{
+    font-size: 80px;
+    font-size: 4.4444444444rem;
+    line-height: 1.0069444444;
+    font-family: Right Grotesk Tight,Helvetica,Arial,sans-serif;
+    color: #fff;
+    text-align: center;
+}
+img{
+    
+   
+}
+h2{
+    color: #fff;
+    font-weight: 700;
+    line-height: 100%;
+    font-size: 38px;
+}
+
+h3{
+    color: #fff;
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 40px;
+    font-weight: 500;
+    letter-spacing: -.04em;
+    font-weight: 700;
+}
