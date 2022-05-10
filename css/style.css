@@ -19,14 +19,15 @@ body{
     display: block;
     width: 16.667vw;
     height: 100vh;
-    position: fixed ;
-    border-right: 1px solid #000000;
+position: fixed;
+    border-right: 1px solid #fff;
     color: #fff;
+    
     
 }
 
 .SidebarHeader-logo{
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #fff;
    
 }
 
@@ -39,23 +40,27 @@ body{
 
 .sidebar_item{
     font-size: 16px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #fff;
     padding: 34px ;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   align-items: center;
+   align-items: left;
+   
 }
 .container{
     display: grid;
     grid-column: 3/-1;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .Header{
     display: grid;
     grid-column: 3s/-1;
     height: 128px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #fff;
+    
 }
 
 .content{
@@ -68,11 +73,18 @@ body{
     
 }
 
-.content p{
-    grid-column: 4/10;
-    justify-content: center;
-    margin-top:0 ;
-    
+img{
+
+    grid-column: 1/9;
+    max-width: 100%;
+    align-items: center;
+
+}
+
+.Image_image__1KlNM{
+    width: 100%;
+    border: 1px solid hsla(0,0%,100%,.3);
+    align-items: center;
 }
 
 p {
@@ -80,6 +92,8 @@ p {
     font-size: 1.125rem;
     font-family: Graphik,Helvetica,Arial,sans-serif;
     line-height: 1.6111111111;
+    justify-content: center;
+    margin-top:0 ;
 }
 
 h1{
@@ -88,19 +102,19 @@ h1{
     line-height: 1.0069444444;
     font-family: Right Grotesk Tight,Helvetica,Arial,sans-serif;
     color: #fff;
-    text-align: center;
+    text-align: left;
+    grid-column: 1/9;
 }
-img{
-    
-   
-}
+
 h2{
     color: #fff;
     font-weight: 700;
     line-height: 100%;
     font-size: 38px;
-}
+    grid-column: 1/9;
+    text-align: left;
 
+}
 h3{
     color: #fff;
     font-size: 30px;
@@ -109,4 +123,7 @@ h3{
     font-weight: 500;
     letter-spacing: -.04em;
     font-weight: 700;
+    grid-column: 1/9;
+    text-align: centre;
+
 }
