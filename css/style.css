@@ -2,7 +2,7 @@
 body{
     margin: 0;
     position: relative;
-    
+
 }
 
 
@@ -27,7 +27,7 @@ body{
 .SidebarHeader-logo img{
     width: 100%;
     height:100% ;
-    vertical-align: middle;   
+    vertical-align: middle;
 }
 
 
@@ -59,13 +59,65 @@ body{
 
 .content h1{
     grid-column: 6/9;
-    
+
 }
 
 .content p{
     grid-column: 4/10;
     justify-content: center;
     margin-top:0 ;
-    
+
+}
+.ColorPallete{
+  position: static;
+}
+.hidden{
+  visibility: hidden;
 }
 
+.sidebar_button{
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-color: transparent;
+}
+.Color_1{
+  grid-column: 2;
+  background-color: red;
+}
+.Color_2{
+  grid-column: 3;
+  background-color: green;
+}
+.Color_3{
+  grid-column: 4;
+  background-color: red;
+}
+.Color_4{
+  grid-column: 5;
+  background-color: green;
+}
+.Color_5{
+  grid-column: 6;
+  background-color: red;
+}
+.Color_6{
+  grid-column: 7;
+  background-color: green;
+}
+.Background_Color{
+  grid-column: 8;
+  background-color: red;
+}
+.Font_Color{
+  grid-column: 9;
+  background-color: green;
+}
+.Title_Color{
+  grid-column: 10;
+  background-color: red;
+}
+.Header_Color{
+  grid-column: 11;
+  background-color: green;
+}
