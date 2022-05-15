@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
- 
+    <link rel="stylesheet" href="/css/master.css">
+
+
 
     <title>Creative Minds</title>
 </head>
@@ -14,31 +16,79 @@
         <div class="sidebar">
             <div class="SidebarHeader-logo"><a href=""><img src="image/logo.jpeg" alt=""></a></div>
             <div class="Sidebar_menu">
-                <div class="sidebar_item">Introduction</div>
+                <div class="sidebar_item"><button type="button" name="Intro_btn" class="sidebar_button" onclick="Show_Intro()">Introduction</button></div>
                 <div class="sidebar_item">Logo</div>
                 <div class="sidebar_item">Typography</div>
-                <div class="sidebar_item">Color palette</div>
+                <div class="sidebar_item"><button type="button" name="Color_btn" class="sidebar_button" onclick="Show_Color()">Color Palette</button></div>
             </div>
         </div>
 
         <div class="container">
-          
+
             <header class="Header">
-               
+
             </header>
 
-            <div class="content">
-                <h1>Introduction</h1>
-                <p>Typography is the craft of designing and arranging type (i.e. text). Using various typefaces, spacing, sizes and contrast, typographers seek to make writing more legible, ordered and appealing to read. Typography is powerful</p>
+            <div class="content Introduction">
+                <h1 class="Title">Introduction</h1>
+                <p class="Text">Typography is the craft of designing and arranging type (i.e. text). Using various typefaces, spacing, sizes and contrast, typographers seek to make writing more legible, ordered and appealing to read. Typography is powerful</p>
+            </div>
+            <div class="content hidden ColorPallete">
+                <h1 class="Title">Color Palette</h1>
+                <select name="selector" id="Selector">
+                  <option value="Pallete_1">Palette 1</option>
+                  <option value="Pallete_2">Palette 2</option>
+                  <option value="Pallete_3">Palette 3</option>
+                  <option value="Pallete_4">Palette 4</option>
+                  <option value="Pallete_5">Palette 5</option>
+                  <option value="Pallete_6">Palette 6</option>
+                  <option value="Background">Background</option>
+                  <option value="Font">Font</option>
+                  <option value="Title">Title</option>
+                  <option value="Header">Header</option>
+                </select>
+                <input type="text" id="color_input" name="" value="">
+                <button type="button" name="button" id="Change_btn" onclick="Change_Color()">Change Color</button>
+                <div class="Colors Color_1">
+                  <h4 class="Text">Pallete 1</h4>
+                </div>
+                <div class="Colors Color_2">
+                  <h4 class="Text">Pallete 2</h4>
+                </div>
+                <div class="Colors Color_3">
+                  <h4 class="Text">Pallete 3</h4>
+                </div>
+                <div class="Colors Color_4">
+                  <h4 class="Text">Pallete 4</h4>
+                </div>
+                <div class="Colors Color_5">
+                  <h4 class="Text">Pallete 5</h4>
+                </div>
+                <div class="Colors Color_6">
+                  <h4 class="Text">Pallete 6</h4>
+                </div>
+                <div class="Colors Background_Color">
+                  <h4 class="Text">Background Color</h4>
+                </div>
+                <div class="Colors Font_Color">
+                  <h4 class="Text">Font Color</h4>
+                </div>
+                <div class="Colors Title_Color">
+                  <h4 class="Text">Title Color</h4>
+                </div>
+                <div class="Colors Header_Color">
+                  <h4 class="Text">Header Color</h4>
+                </div>
             </div>
 
             <footer class="footer"></footer>
         </div>
-    </div>  
-    
-    
+    </div>
+    <script type="text/javascript" src = "js/script.js">
+    </script>
+
 </body>
-        
-     
+
+
 
 </html>
