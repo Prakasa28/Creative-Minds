@@ -105,3 +105,8 @@ body{
     
 }
 
+#logoUpload{
+    display: grid;
+    grid-column: 4/10;
+}
+
