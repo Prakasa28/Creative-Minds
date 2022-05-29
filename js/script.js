@@ -1,59 +1,122 @@
+pal_1_start = localStorage.getItem('Pallete_1_lcolor');
+pal_2_start = localStorage.getItem('Pallete_2_lcolor');
+pal_3_start = localStorage.getItem('Pallete_3_lcolor');
+pal_4_start = localStorage.getItem('Pallete_4_lcolor');
+pal_5_start = localStorage.getItem('Pallete_5_lcolor');
+pal_6_start = localStorage.getItem('Pallete_6_lcolor');
+background_start = localStorage.getItem('Background_lcolor');
+font_start = localStorage.getItem('Font_lcolor');
+title_start = localStorage.getItem('Title_lcolor');
+header_start = localStorage.getItem('Header_lcolor');
+
+target_pal_1_start = document.querySelector('.Color_1');
+target_pal_1_start.style.backgroundColor = pal_1_start;
+target_pal_2_start = document.querySelector('.Color_2');
+target_pal_2_start.style.backgroundColor = pal_2_start;
+target_pal_3_start = document.querySelector('.Color_3');
+target_pal_3_start.style.backgroundColor = pal_3_start;
+target_pal_4_start = document.querySelector('.Color_4');
+target_pal_4_start.style.backgroundColor = pal_4_start;
+target_pal_5_start = document.querySelector('.Color_5');
+target_pal_5_start.style.backgroundColor = pal_5_start;
+target_pal_6_start = document.querySelector('.Color_6');
+target_pal_6_start.style.backgroundColor = pal_6_start;
+target_background_start = document.getElementsByClassName('content');
+for (var i = 0; i < target_background_start.length; i++) {
+  target_background_start[i].style.backgroundColor = background_start;
+}
+target_font_start = document.getElementsByClassName('Text');
+for (var i = 0; i < target_font_start.length; i++) {
+  target_font_start[i].style.color = font_start;
+}
+target_title_start = document.getElementsByClassName('Title');
+for (var i = 0; i < target_title_start.length; i++) {
+  target_title_start[i].style.color = title_start;
+}
+target_header_start = document.querySelector('.Header');
+target_header_start.style.backgroundColor = header_start;
+
+function Check_Color(){
+  to_check = color_input.value;
+  color_input_2.value = to_check;
+}
+
 function Change_Color(){
   color_picked = color_input.value;
   if (Selector.value == "Pallete_1") {
-    target = document.querySelector('.Color_1');
-    target.style.backgroundColor = color_picked; //the only thing that needs to be chagned is that this should target the value in the database, not the value of the css
+    localStorage.removeItem('Pallete_1_lcolor');
+    localStorage.setItem('Pallete_1_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Pallete_1_lcolor');
+    target_pal_1_start.style.backgroundColor = color_picked;
     return;
   }
   else if (Selector.value == "Pallete_2") {
-    target = document.querySelector('.Color_2');
-    target.style.backgroundColor = color_picked;
+    localStorage.removeItem('Pallete_2_lcolor');
+    localStorage.setItem('Pallete_2_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Pallete_2_lcolor');
+    target_pal_2_start.style.backgroundColor = color_picked;
     return;
   }
   else if (Selector.value == "Pallete_3") {
-    target = document.querySelector('.Color_3');
-    target.style.backgroundColor = color_picked;
+    localStorage.removeItem('Pallete_3_lcolor');
+    localStorage.setItem('Pallete_3_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Pallete_3_lcolor');
+    target_pal_3_start.style.backgroundColor = color_picked;
     return;
   }
   else if (Selector.value == "Pallete_4") {
-    target = document.querySelector('.Color_4');
-    target.style.backgroundColor = color_picked;
+    localStorage.removeItem('Pallete_4_lcolor');
+    localStorage.setItem('Pallete_4_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Pallete_4_lcolor');
+    target_pal_4_start.style.backgroundColor = color_picked;
     return;
   }
   else if (Selector.value == "Pallete_5") {
-    target = document.querySelector('.Color_5');
-    target.style.backgroundColor = color_picked;
+    localStorage.removeItem('Pallete_5_lcolor');
+    localStorage.setItem('Pallete_5_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Pallete_5_lcolor');
+    target_pal_5_start.style.backgroundColor = color_picked;
     return;
   }
   else if (Selector.value == "Pallete_6") {
-    target = document.querySelector('.Color_6');
-    target.style.backgroundColor = color_picked;
+    localStorage.removeItem('Pallete_6_lcolor');
+    localStorage.setItem('Pallete_6_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Pallete_6_lcolor');
+    target_pal_6_start.style.backgroundColor = color_picked;
     return;
   }
   else if (Selector.value == "Background") {
-    target = document.getElementsByClassName('content')
-    for (var i = 0; i < target.length; i++) {
-      target[i].style.backgroundColor = color_picked;
+    localStorage.removeItem('Background_lcolor');
+    localStorage.setItem('Background_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Background_lcolor');
+    for (var i = 0; i < target_background_start.length; i++) {
+      target_background_start[i].style.backgroundColor = color_picked;
     }
     return;
   }
   else if (Selector.value == "Font") {
-    target = document.getElementsByClassName('Text')
-    for (var i = 0; i < target.length; i++) {
-      target[i].style.color = color_picked;
+    localStorage.removeItem('Font_lcolor');
+    localStorage.setItem('Font_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Font_lcolor');
+    for (var i = 0; i < target_font_start.length; i++) {
+      target_font_start[i].style.color = color_picked;
     }
     return;
   }
   else if (Selector.value == "Title") {
-    target = document.getElementsByClassName('Title')
-    for (var i = 0; i < target.length; i++) {
-      target[i].style.color = color_picked;
+    localStorage.removeItem('Title_lcolor');
+    localStorage.setItem('Title_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Title_lcolor');
+    for (var i = 0; i < target_title_start.length; i++) {
+      target_title_start[i].style.color = color_picked;
     }
     return;
   }
   else if (Selector.value == "Header") {
-    target = document.querySelector('.Header');
-    target.style.backgroundColor = color_picked;
+    localStorage.removeItem('Header_lcolor');
+    localStorage.setItem('Header_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Header_lcolor');
+    target_header_start.style.backgroundColor = color_picked;
     return;
   }
 }
