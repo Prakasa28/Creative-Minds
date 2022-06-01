@@ -1,3 +1,6 @@
+const txt_listen = document.getElementById('color_input');
+const colour_listen = document.getElementById('color_input_2');
+
 pal_1_start = localStorage.getItem('Pallete_1_lcolor');
 pal_2_start = localStorage.getItem('Pallete_2_lcolor');
 pal_3_start = localStorage.getItem('Pallete_3_lcolor');
@@ -9,18 +12,30 @@ font_start = localStorage.getItem('Font_lcolor');
 title_start = localStorage.getItem('Title_lcolor');
 header_start = localStorage.getItem('Header_lcolor');
 
-target_pal_1_start = document.querySelector('.Color_1');
-target_pal_1_start.style.backgroundColor = pal_1_start;
-target_pal_2_start = document.querySelector('.Color_2');
-target_pal_2_start.style.backgroundColor = pal_2_start;
-target_pal_3_start = document.querySelector('.Color_3');
-target_pal_3_start.style.backgroundColor = pal_3_start;
-target_pal_4_start = document.querySelector('.Color_4');
-target_pal_4_start.style.backgroundColor = pal_4_start;
-target_pal_5_start = document.querySelector('.Color_5');
-target_pal_5_start.style.backgroundColor = pal_5_start;
-target_pal_6_start = document.querySelector('.Color_6');
-target_pal_6_start.style.backgroundColor = pal_6_start;
+target_pal_1_start = document.getElementsByClassName('Color_1');
+for (var i = 0; i < target_pal_1_start.length; i++) {
+  target_pal_1_start[i].style.backgroundColor = pal_1_start;
+}
+target_pal_2_start = document.getElementsByClassName('Color_2');
+for (var i = 0; i < target_pal_2_start.length; i++) {
+  target_pal_2_start[i].style.backgroundColor = pal_2_start;
+}
+target_pal_3_start = document.getElementsByClassName('Color_3');
+for (var i = 0; i < target_pal_3_start.length; i++) {
+  target_pal_3_start[i].style.backgroundColor = pal_3_start;
+}
+target_pal_4_start = document.getElementsByClassName('Color_4');
+for (var i = 0; i < target_pal_4_start.length; i++) {
+  target_pal_4_start[i].style.backgroundColor = pal_4_start;
+}
+target_pal_5_start = document.getElementsByClassName('Color_5');
+for (var i = 0; i < target_pal_5_start.length; i++) {
+  target_pal_5_start[i].style.backgroundColor = pal_5_start;
+}
+target_pal_6_start = document.getElementsByClassName('Color_6');
+for (var i = 0; i < target_pal_6_start.length; i++) {
+  target_pal_6_start[i].style.backgroundColor = pal_6_start;
+}
 target_background_start = document.getElementsByClassName('content');
 for (var i = 0; i < target_background_start.length; i++) {
   target_background_start[i].style.backgroundColor = background_start;
@@ -33,12 +48,21 @@ target_title_start = document.getElementsByClassName('Title');
 for (var i = 0; i < target_title_start.length; i++) {
   target_title_start[i].style.color = title_start;
 }
-target_header_start = document.querySelector('.Header');
-target_header_start.style.backgroundColor = header_start;
+target_header_start = document.getElementsByClassName('Header');
+for (var i = 0; i < target_header_start.length; i++) {
+  target_header_start[i].style.backgroundColor = header_start;
+}
 
-function Check_Color(){
-  to_check = color_input.value;
-  color_input_2.value = to_check;
+
+color_input.addEventListener('keyup', Update_picker);
+color_input_2.addEventListener('mouseup', Update_text);
+function Update_picker(){
+  update_pick = color_input.value;
+  color_input_2.value = update_pick;
+}
+function Update_text(){
+  update_txt = color_input_2.value;
+  color_input.value = update_txt;
 }
 
 function Change_Color(){
@@ -47,42 +71,54 @@ function Change_Color(){
     localStorage.removeItem('Pallete_1_lcolor');
     localStorage.setItem('Pallete_1_lcolor', color_picked);
     const newcolor = localStorage.getItem('Pallete_1_lcolor');
-    target_pal_1_start.style.backgroundColor = color_picked;
+    for (var i = 0; i < target_pal_1_start.length; i++) {
+      target_pal_1_start[i].style.backgroundColor = color_picked;
+    }
     return;
   }
   else if (Selector.value == "Pallete_2") {
     localStorage.removeItem('Pallete_2_lcolor');
     localStorage.setItem('Pallete_2_lcolor', color_picked);
     const newcolor = localStorage.getItem('Pallete_2_lcolor');
-    target_pal_2_start.style.backgroundColor = color_picked;
+    for (var i = 0; i < target_pal_2_start.length; i++) {
+      target_pal_2_start[i].style.backgroundColor = color_picked;
+    }
     return;
   }
   else if (Selector.value == "Pallete_3") {
     localStorage.removeItem('Pallete_3_lcolor');
     localStorage.setItem('Pallete_3_lcolor', color_picked);
     const newcolor = localStorage.getItem('Pallete_3_lcolor');
-    target_pal_3_start.style.backgroundColor = color_picked;
+    for (var i = 0; i < target_pal_3_start.length; i++) {
+      target_pal_3_start[i].style.backgroundColor = color_picked;
+    }
     return;
   }
   else if (Selector.value == "Pallete_4") {
     localStorage.removeItem('Pallete_4_lcolor');
     localStorage.setItem('Pallete_4_lcolor', color_picked);
     const newcolor = localStorage.getItem('Pallete_4_lcolor');
-    target_pal_4_start.style.backgroundColor = color_picked;
+    for (var i = 0; i < target_pal_4_start.length; i++) {
+      target_pal_4_start[i].style.backgroundColor = color_picked;
+    }
     return;
   }
   else if (Selector.value == "Pallete_5") {
     localStorage.removeItem('Pallete_5_lcolor');
     localStorage.setItem('Pallete_5_lcolor', color_picked);
     const newcolor = localStorage.getItem('Pallete_5_lcolor');
-    target_pal_5_start.style.backgroundColor = color_picked;
+    for (var i = 0; i < target_pal_5_start.length; i++) {
+      target_pal_5_start[i].style.backgroundColor = color_picked;
+    }
     return;
   }
   else if (Selector.value == "Pallete_6") {
     localStorage.removeItem('Pallete_6_lcolor');
     localStorage.setItem('Pallete_6_lcolor', color_picked);
     const newcolor = localStorage.getItem('Pallete_6_lcolor');
-    target_pal_6_start.style.backgroundColor = color_picked;
+    for (var i = 0; i < target_pal_6_start.length; i++) {
+      target_pal_6_start[i].style.backgroundColor = color_picked;
+    }
     return;
   }
   else if (Selector.value == "Background") {
@@ -116,7 +152,9 @@ function Change_Color(){
     localStorage.removeItem('Header_lcolor');
     localStorage.setItem('Header_lcolor', color_picked);
     const newcolor = localStorage.getItem('Header_lcolor');
-    target_header_start.style.backgroundColor = color_picked;
+    for (var i = 0; i < target_header_start.length; i++) {
+      target_header_start[i].style.backgroundColor = color_picked;
+    }
     return;
   }
 }
