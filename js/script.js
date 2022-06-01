@@ -66,7 +66,7 @@ function Update_text(){
 }
 
 function Change_Color(){
-  color_picked = color_input.value;
+  color_picked = color_input_2.value;
   if (Selector.value == "Pallete_1") {
     localStorage.removeItem('Pallete_1_lcolor');
     localStorage.setItem('Pallete_1_lcolor', color_picked);
