@@ -17,12 +17,13 @@
         <div class="SidebarHeader-logo">
           <a href=""><img id="logoPreview" src="image/logo.jpeg" alt="" /></a>
         </div>
-        <div class="Sidebar_menu">
-          <div class="sidebar_item" id="duplicate">Introduction</div>
+        <div class="Sidebar_menu" id="drop">
+          
           <div class="sidebar_item">Logo</div>
           <div class="sidebar_item">Typography</div>
           <div class="sidebar_item">Color palette</div>
         </div>
+        <div class="sidebar_item" id="duplicate">Introduction</div>
       </div>
 
       <div class="container">
@@ -62,6 +63,13 @@
             .setAttribute("src", logoImageDataUrl);
         }
       });
+
+      window.addEventListener('load' ,() =>{
+
+var dragdropmenu = localStorage.getItem('dragdropmenu');
+document.getElementById('drop').outerHTML = dragdropmenu ;
+
+})
     </script>
   </body>
 </html>

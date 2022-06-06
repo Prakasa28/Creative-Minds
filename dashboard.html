@@ -16,31 +16,49 @@
   <body>
     <div class="layout">
       <div class="sidebar">
-        <div class="SidebarHeader-logo">
+        <div class="SidebarHeader-logo"> 
+        
+          
           <a href=""><img id="logoPreview" src="image/logo.jpeg" alt="" /></a>
+          <label for="logoUpload">
+            <img class="edit-icon" src="image/editicon.svg"/>
+          </label>
+          
+          
         </div>
-        <div class="Sidebar_menu" id="sortable">
+        <input type="file" id="logoUpload" />
+        <!-- <div class="Sidebar_menu" id="sortable">
           <div class="sidebar_item" id="duplicate">Introduction</div>
           <div class="sidebar_item">Logo</div>
           <div class="sidebar_item">Typography</div>
           <div class="sidebar_item">Color palette</div>
-        </div>
+        </div> -->
+        <ul id="sortable" class="Sidebar_menu">
+          <li class="sidebar_item" data-arrange="1">Introduction</li>
+          <li class="sidebar_item" data-arrange="2">Color palette</li>
+          <li class="sidebar_item" data-arrange="3">Typography</li>
+          <li class="sidebar_item" data-arrange="4">Downloads</li>
+        </ul>
+        <div class="sidebar_item" id="duplicate">Introduction</div>
+        <input type="button" id="copy" value="Make Copy" onclick="copy()" />
+          <button onclick="myFunction()">Remove</button>
+          <button class="applybtn" onclick="dragdrop()">Apply</button>
       </div>
 
       <div class="container">
         <header class="Header">
-          <div id="google_translate_element" class="google-translate"></div>
           <h1>Dashboard</h1>
-          <input type="button" id="copy" value="Make Copy" onclick="copy()" />
-          <button onclick="myFunction()">Remove</button>
-          <button onclick="dragdrop()">Apply</button>
+
+          <div id="google_translate_element" class="google-translate"></div>
         </header>
 
         <div class="content">
+          <div class="intro">
           <input type="text" id="head" name="head" />
           <input type="text" id="para" name="para" />
           <input type="submit" onclick="handleSubmit()" />
-          <input type="file" id="logoUpload" />
+          
+        </div>
         </div>
 
         <footer class="footer"></footer>
