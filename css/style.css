@@ -17,33 +17,62 @@ body{
     display: block;
     width: 16.667vw;
     height: 100vh;
-    border-right: 1px solid #000000;
+    border-right: 1px solid #756f68;
+    position: fixed;
+
 }
 
 .SidebarHeader-logo{
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #756f68;
+    display: flex;
+    padding: 43px 0 44px;
+   justify-content: center;
+    align-items: center;
 }
 
-.SidebarHeader-logo img{
-    width: 100%;
-    height:100% ;
+#logoUpload
+{   
+    visibility: hidden;
+    user-select: none;
+}
+
+#logoPreview{
+    width: 64px;
+    height: 58px;
     vertical-align: middle;   
+}
+
+.edit-icon{
+    width: 24px;
+    height: 18px;
 }
 
 #duplicate{
     font-size: 16px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #756f68;
     padding: 34px ;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
 }
-
+.Sidebar_menu{
+    padding: 0;
+    margin-bottom: 0;
+}
 .sidebar_item{
     font-size: 16px;
-    border-bottom: 1px solid #000000;
-    padding: 34px ;
+    border-bottom: 1px solid #756f68;
+    padding: 24px ;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+#duplicate{
+    font-size: 16px;
+    border-bottom: 1px solid #756f68;
+    padding: 24px ;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -53,12 +82,27 @@ body{
     display: grid;
     grid-column: 2/-1;
 }
+.intro{
+    
+    display: flex;
+    flex-direction: column;
+    grid-column: 6/7;
+    justify-content: space-around;
+    align-items: center;
+}
 
-.Header{
+.Header{    
     display: grid;
     grid-column: 2/-1;
-    height: 128px;
-    border-bottom: 1px solid #000000;
+    height: 145px;
+    border-bottom: 1px solid #756f68;
+}
+
+.Header h1{
+    display: grid;
+    grid-column:5 ;
+    justify-content: center;
+    align-content: center ;
 }
 
 .google-translate{
@@ -105,8 +149,4 @@ body{
     
 }
 
-#logoUpload{
-    display: grid;
-    grid-column: 4/10;
-}
 

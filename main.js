@@ -19,11 +19,16 @@ function myFunction() {
 
 //Change text
 window.addEventListener("load", () => {
-  const introh1 = localStorage.getItem("INTROH1");
-  const introp1 = localStorage.getItem("INTROP1");
+  if (localStorage.getItem('INTROH1') !== null) {
+    const introh1 = localStorage.getItem("INTROH1");
+    const introp1 = localStorage.getItem("INTROP1");
+  
+    document.getElementById("introtext").innerHTML = introh1;
+    document.getElementById("intropara").innerHTML = introp1;
+  } else {
+    console.log("its not there");
+  }
 
-  document.getElementById("introtext").innerHTML = introh1;
-  document.getElementById("intropara").innerHTML = introp1;
 });
 
 // upload logo
@@ -49,18 +54,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Menu sortable
 
-$(function () {
+/*$(function () {
   $("#sortable").sortable();
-});
+});*/
 
 function dragdrop() {
   var list = document.getElementsByClassName("Sidebar_menu")[0].outerHTML;
   localStorage.setItem("dragdropmenu", list);
 }
 
-/* window.addEventListener('load' ,() =>{
 
-const dragdropmenu = localStorage.getItem('dragdropmenu');
-document.getElementById('sortable').outerHTML = dragdropmenu ;
 
-})*/
+
+$("#sortable").sortable({
+  cancel: ".fixed",
+  update: function (event, ui) {
+      var data = [];
+      $('#sortable').find('li').each(function(i) {
+          data.push($(this).data('arrange'));
+      });
+      localStorage.setItem('sort',data); //to set
+      }
+});
+
+
+if(localStorage.getItem('sort')){
+	var array = localStorage.getItem('sort').split(',');
+      map = {},
+      el = $('ul');
+  
+  $('ul > li').each(function() { 
+      var el = $(this);
+      map[el.data('arrange')] = el;
+  });
+  $('ul').html('');
+  for (var i = 0; i <= array.length; i++) {
+    if (array[i]) {
+        $('ul').append(map[array[i]]);
+    }
+  }
+}; //to get.
+
+
+
+
+
