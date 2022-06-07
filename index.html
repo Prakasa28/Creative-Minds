@@ -35,7 +35,7 @@
 
         <div class="content">
           <h1><span id="introtext" /></h1>
-          <p><span id="intropara" /></p>
+          <p><span id="intropara"/></p>
         </div>
 
         <footer class="footer"></footer>
@@ -69,7 +69,29 @@
 var dragdropmenu = localStorage.getItem('dragdropmenu');
 document.getElementById('drop').outerHTML = dragdropmenu ;
 
+if(localStorage.getItem('output')) {
+  var storedSize = localStorage.getItem('output');
+ document.getElementById("introtext").style.fontSize =  storedSize;
+}
+
+if(localStorage.getItem('outputp')) {
+  var storedSize = localStorage.getItem('outputp');
+ document.getElementById("intropara").style.fontSize =  storedSize;
+}
+
+if (localStorage.getItem('INTROH1') !== null) {
+    const introh1 = localStorage.getItem("INTROH1");
+    const introp1 = localStorage.getItem("INTROP1");
+  
+    document.getElementById("introtext").innerHTML = introh1;
+    document.getElementById("intropara").innerHTML = introp1;
+  } else {
+    console.log("its not there");
+  }
+  
+
 })
+
     </script>
   </body>
 </html>

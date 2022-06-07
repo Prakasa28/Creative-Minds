@@ -40,9 +40,13 @@
           <li class="sidebar_item" data-arrange="4">Downloads</li>
         </ul>
         <div class="sidebar_item" id="duplicate">Introduction</div>
-        <input type="button" id="copy" value="Make Copy" onclick="copy()" />
+        <div class="sidebarduplicate" id="copy" value="Make Copy" onclick="copy()">
+         +
+        </div>
+        <div class="sidebarbtns">
           <button onclick="myFunction()">Remove</button>
           <button class="applybtn" onclick="dragdrop()">Apply</button>
+        </div>
       </div>
 
       <div class="container">
@@ -54,7 +58,13 @@
 
         <div class="content">
           <div class="intro">
+            <h1 id="introtext">Intro Header</h1>
+            <input type="text"  id="input">
+            <input type="button"onclick="changeTextSize()"  value="Save Font Size">
           <input type="text" id="head" name="head" />
+          <h1 id="intropara">Intro Paragraph</h1>
+          <input type="text"  id="inputp"/>
+            <input type="button"onclick="changeTextSizep()"  value="Save Font Size">
           <input type="text" id="para" name="para" />
           <input type="submit" onclick="handleSubmit()" />
           
