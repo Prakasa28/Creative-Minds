@@ -18,7 +18,7 @@ function myFunction() {
 }
 
 //Change text
-window.addEventListener("load", () => {
+/*window.addEventListener("load", () => {
   if (localStorage.getItem('INTROH1') !== null) {
     const introh1 = localStorage.getItem("INTROH1");
     const introp1 = localStorage.getItem("INTROP1");
@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
     console.log("its not there");
   }
 
-});
+});*/
 
 // upload logo
 document.querySelector("#logoUpload").addEventListener("change", function () {
@@ -94,6 +94,35 @@ if(localStorage.getItem('sort')){
     }
   }
 }; //to get.
+
+
+//Font size
+
+function changeTextSize()  {
+  var input = document.getElementById('input').value;
+
+  var output =
+  document.getElementById('introtext').style.fontSize = input + "px";
+    localStorage.setItem('output', output);
+}
+
+window.addEventListener("load", () => {
+
+
+if(localStorage.getItem('output')) {
+  var storedSize = localStorage.getItem('output');
+ document.getElementById("introtext").style.fontSize =  storedSize;
+}
+});
+
+function changeTextSizep()  {
+  var input = document.getElementById('inputp').value;
+
+  var outputp =
+  document.getElementById('intropara').style.fontSize = input + "px";
+    localStorage.setItem('outputp', outputp);
+}
+
 
 
 

@@ -78,9 +78,24 @@ body{
    justify-content: space-between;
    align-items: center;
 }
+.sidebarbtns{
+    bottom: 0;
+    position: fixed;
+}
+.sidebarduplicate{
+    bottom: 35px;
+    position: fixed;
+   padding-left: 114px;
+   padding-right:114px;
+   
+   font-size: 50px;
+   border-top: 1px solid #756f68;
+   cursor: pointer;
+    
+}
 .container{
-    display: grid;
-    grid-column: 2/-1;
+    
+    grid-column: 3/-1;
 }
 .intro{
     
@@ -89,11 +104,14 @@ body{
     grid-column: 6/7;
     justify-content: space-around;
     align-items: center;
+ 
+    
 }
 
-.Header{    
+.Header{   
+    margin-left: 1px;
     display: grid;
-    grid-column: 2/-1;
+    grid-column: 3/-1;
     height: 145px;
     border-bottom: 1px solid #756f68;
 }
@@ -102,7 +120,8 @@ body{
     display: grid;
     grid-column:5 ;
     justify-content: center;
-    align-content: center ;
+    align-items: center ;
+    margin-left: 48px;
 }
 
 .google-translate{
@@ -147,6 +166,16 @@ body{
     justify-content: center;
     margin-top:0 ;
     
+}
+
+#head{
+    width: 250px ;
+    height: 50px;
+}
+
+#para{
+    width: 450px ;
+    height: 150px; 
 }
 
 
