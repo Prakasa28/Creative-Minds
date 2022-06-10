@@ -11,6 +11,10 @@ background_start = localStorage.getItem('Background_lcolor');
 font_start = localStorage.getItem('Font_lcolor');
 title_start = localStorage.getItem('Title_lcolor');
 header_start = localStorage.getItem('Header_lcolor');
+border_left_start = localStorage.getItem('Border_L_lcolor');
+border_right_start = localStorage.getItem('Border_R_lcolor');
+border_bottom_start = localStorage.getItem('Border_B_lcolor');
+border_top_start = localStorage.getItem('Border_T_lcolor');
 
 target_pal_1_start = document.getElementsByClassName('Color_1');
 for (var i = 0; i < target_pal_1_start.length; i++) {
@@ -52,7 +56,22 @@ target_header_start = document.getElementsByClassName('Header');
 for (var i = 0; i < target_header_start.length; i++) {
   target_header_start[i].style.backgroundColor = header_start;
 }
-
+target_border_l_start = document.getElementsByClassName('Borders');
+for (var i = 0; i < target_border_l_start.length; i++) {
+  target_border_l_start[i].style.borderLeftColor = border_left_start;
+}
+target_border_r_start = document.getElementsByClassName('Borders');
+for (var i = 0; i < target_border_r_start.length; i++) {
+  target_border_r_start[i].style.borderRightColor = border_right_start;
+}
+target_border_t_start = document.getElementsByClassName('Borders');
+for (var i = 0; i < target_border_t_start.length; i++) {
+  target_border_t_start[i].style.borderTopColor = border_top_start;
+}
+target_border_b_start = document.getElementsByClassName('Borders');
+for (var i = 0; i < target_border_b_start.length; i++) {
+  target_border_b_start[i].style.borderBottomColor = border_bottom_start;
+}
 
 color_input.addEventListener('keyup', Update_picker);
 color_input_2.addEventListener('mouseup', Update_text);
@@ -154,6 +173,42 @@ function Change_Color(){
     const newcolor = localStorage.getItem('Header_lcolor');
     for (var i = 0; i < target_header_start.length; i++) {
       target_header_start[i].style.backgroundColor = color_picked;
+    }
+    return;
+  }
+  else if (Selector.value == "Border Left") {
+    localStorage.removeItem('Border_L_lcolor');
+    localStorage.setItem('Border_L_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Border_L_lcolor');
+    for (var i = 0; i < target_border_l_start.length; i++) {
+      target_border_l_start[i].style.borderLeftColor = color_picked;
+    }
+    return;
+  }
+  else if (Selector.value == "Border Right") {
+    localStorage.removeItem('Border_R_lcolor');
+    localStorage.setItem('Border_R_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Border_R_lcolor');
+    for (var i = 0; i < target_border_r_start.length; i++) {
+      target_border_r_start[i].style.borderRightColor = color_picked;
+    }
+    return;
+  }
+  else if (Selector.value == "Border Top") {
+    localStorage.removeItem('Border_T_lcolor');
+    localStorage.setItem('Border_T_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Border_T_lcolor');
+    for (var i = 0; i < target_border_t_start.length; i++) {
+      target_border_t_start[i].style.borderTopColor = color_picked;
+    }
+    return;
+  }
+  else if (Selector.value == "Border Bottom") {
+    localStorage.removeItem('Border_B_lcolor');
+    localStorage.setItem('Border_B_lcolor', color_picked);
+    const newcolor = localStorage.getItem('Border_B_lcolor');
+    for (var i = 0; i < target_border_b_start.length; i++) {
+      target_border_b_start[i].style.borderBottomColor = color_picked;
     }
     return;
   }
