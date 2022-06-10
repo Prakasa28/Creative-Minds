@@ -13,19 +13,19 @@
 </head>
 <body>
     <div class="layout">
-        <div class="sidebar">
-            <div class="SidebarHeader-logo"><a href=""><img src="image/logo.jpeg" alt=""></a></div>
-            <div class="Sidebar_menu">
-                <div class="sidebar_item"><button type="button" name="Intro_btn" class="sidebar_button" onclick="Show_Intro()">Introduction</button></div>
-                <div class="sidebar_item">Logo</div>
-                <div class="sidebar_item">Typography</div>
-                <div class="sidebar_item"><button type="button" name="Color_btn" class="sidebar_button" onclick="Show_Color()">Color Palette</button></div>
+        <div class="sidebar Borders">
+            <div class="SidebarHeader-logo Borders"><a href=""><img src="image/logo.jpeg" alt=""></a></div>
+            <div class="Sidebar_menu Borders">
+                <div class="sidebar_item Borders"><button type="button" name="Intro_btn" class="sidebar_button" onclick="Show_Intro()">Introduction</button></div>
+                <div class="sidebar_item Borders">Logo</div>
+                <div class="sidebar_item Borders">Typography</div>
+                <div class="sidebar_item Borders"><button type="button" name="Color_btn" class="sidebar_button" onclick="Show_Color()">Color Palette</button></div>
             </div>
         </div>
 
         <div class="container">
 
-            <header class="Header">
+            <header class="Header Borders">
 
             </header>
 
@@ -35,7 +35,7 @@
             </div>
             <div class="content hidden ColorPallete">
                 <h1 class="Title">Color Palette</h1>
-                <select name="selector" id="Selector">
+                <select name="selector" id="Selector" class="selector">
                   <option value="Pallete_1">Palette 1</option>
                   <option value="Pallete_2">Palette 2</option>
                   <option value="Pallete_3">Palette 3</option>
@@ -46,6 +46,10 @@
                   <option value="Font">Font</option>
                   <option value="Title">Title</option>
                   <option value="Header">Header</option>
+                  <option value="Border Left">Border Left</option>
+                  <option value="Border Right">Border Right</option>
+                  <option value="Border Top">Border Top</option>
+                  <option value="Border Bottom">Border Bottom</option>
                 </select>
                 <input type="text" id="color_input" name="" value="">
                 <input type="color" id="color_input_2" name="" value="">
