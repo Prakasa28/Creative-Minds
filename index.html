@@ -33,11 +33,38 @@
                 <button onclick="myFunction()">Remove</button> -->
         </header>
 
-        <div class="content">
+        <div class="content Introduction">
+          <div class="introbrand">
           <h1><span id="introtext" /></h1>
           <p><span id="intropara"/></p>
-        </div>
+          </div>
+          
+          <div id="app"></div>
 
+        <div class="content hidden ColorPallete">
+          <!-- <h1 class="Title">Color Palette</h1> -->
+
+          <div class="Colors Color_1">
+            <h4 class="Text">Pallete 1</h4>
+          </div>
+          <div class="Colors Color_2">
+            <h4 class="Text">Pallete 2</h4>
+          </div>
+          <div class="Colors Color_3">
+            <h4 class="Text">Pallete 3</h4>
+          </div>
+          <div class="Colors Color_4">
+            <h4 class="Text">Pallete 4</h4>
+          </div>
+          <div class="Colors Color_5">
+            <h4 class="Text">Pallete 5</h4>
+          </div>
+          <div class="Colors Color_6">
+            <h4 class="Text">Pallete 6</h4>
+          </div>
+
+        </div>
+      </div>
         <footer class="footer"></footer>
       </div>
     </div>
@@ -52,6 +79,7 @@
     </script>
 
     <script src="main.js"></script>
+    <script src="script.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -68,6 +96,10 @@
 
 var dragdropmenu = localStorage.getItem('dragdropmenu');
 document.getElementById('drop').outerHTML = dragdropmenu ;
+
+
+var app2 = localStorage.getItem('app');
+document.getElementById('app').outerHTML = app2;
 
 if(localStorage.getItem('output')) {
   var storedSize = localStorage.getItem('output');

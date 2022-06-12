@@ -30,6 +30,14 @@ body{
     align-items: center;
 }
 
+.ColorPallete{
+    position: absolute;
+    margin-top: 200px;
+  }
+  .hidden{
+    visibility: hidden;
+  }
+
 #logoUpload
 {   
     visibility: hidden;
@@ -69,6 +77,15 @@ body{
    justify-content: space-between;
    align-items: center;
 }
+
+.sidebar_button{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+  }
+
 #duplicate{
     font-size: 16px;
     border-bottom: 1px solid #756f68;
@@ -106,6 +123,14 @@ body{
     align-items: center;
  
     
+}
+
+.introbrand {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4/9;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .Header{   
@@ -176,6 +201,11 @@ body{
 #para{
     width: 450px ;
     height: 150px; 
+}
+
+#app{
+    position: absolute;
+    margin-top:  500px;
 }
 
 
