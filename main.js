@@ -63,6 +63,11 @@ function dragdrop() {
   localStorage.setItem("dragdropmenu", list);
 }
 
+function app() {
+  var app = document.getElementById("app").outerHTML;
+  localStorage.setItem("app", app);
+}
+
 
 
 
@@ -122,6 +127,21 @@ function changeTextSizep()  {
   document.getElementById('intropara').style.fontSize = input + "px";
     localStorage.setItem('outputp', outputp);
 }
+
+SmartBlock.Extensions.push(new SmartBlock.CustomBlock({
+  tagName: 'div',
+  className: 'acms-alert',
+  customName: 'alert',
+  icon: '!'
+}));
+
+SmartBlock.Editor('#app', {
+  html: '<h2>Hello World</h2><p>hello</p>',
+  extensions: SmartBlock.Extensions,
+  onChange: function(result) {
+    console.log(result.json, result.html);
+  }
+});
 
 
 
