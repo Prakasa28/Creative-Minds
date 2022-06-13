@@ -49,7 +49,7 @@
           <li class="sidebar_item" data-arrange="3">Typography</li>
           <li class="sidebar_item" data-arrange="4">Downloads</li>
         </ul>
-        <div class="sidebar_item" id="duplicate" contenteditable="true">
+        <div class="sidebar_item" id="duplicate">
           Introduction
         </div>
         <div
@@ -76,6 +76,7 @@
         <div class="content Introduction">
           <div class="intro">
             <h1 id="introtext">Intro Header</h1>
+            <div>Font Size</div>
             <input type="text" id="input" />
             <input
               type="button"
@@ -84,6 +85,7 @@
             />
             <input type="text" id="head" name="head" />
             <h1 id="intropara">Intro Paragraph</h1>
+            <div>Font Size</div>
             <input type="text" id="inputp" />
             <input
               type="button"
@@ -93,11 +95,12 @@
             <input type="text" id="para" name="para" />
             <input type="submit" onclick="handleSubmit()" />
           </div>
-          <div id="app">
-          </div>
-          <button id="app1" onclick="app()">app</button>
-          <div class="content hidden ColorPallete">
+        </div>
+         
+          
+          <div class="hidden ColorPallete">
             <h1 class="Title">Color Palette</h1>
+            <div class="colorinput">
             <select name="selector" id="Selector" class="selector">
               <option value="Pallete_1">Palette 1</option>
               <option value="Pallete_2">Palette 2</option>
@@ -124,6 +127,8 @@
             >
               Change Color
             </button>
+          </div>
+          <div class="coloritslf">
             <div class="Colors Color_1">
               <h4 class="Text">Pallete 1</h4>
             </div>
@@ -142,20 +147,13 @@
             <div class="Colors Color_6">
               <h4 class="Text">Pallete 6</h4>
             </div>
-            <div class="Colors Background_Color">
-              <h4 class="Text">Background Color</h4>
-            </div>
-            <div class="Colors Font_Color">
-              <h4 class="Text">Font Color</h4>
-            </div>
-            <div class="Colors Title_Color">
-              <h4 class="Text">Title Color</h4>
-            </div>
-            <div class="Colors Header_Color">
-              <h4 class="Text">Header Color</h4>
-            </div>
           </div>
-        </div>
+          
+          </div>
+        
+          <div id="app">
+          </div>
+          <button type="" id="app1" onclick="app()">Save Changes</button>
 
         <footer class="footer"></footer>
       </div>

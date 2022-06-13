@@ -32,8 +32,44 @@ body{
 
 .ColorPallete{
     position: absolute;
-    margin-top: 200px;
+    margin-top: -400px;
+    margin-left: 280px;
   }
+
+.coloritslf{
+    margin-top: 50px;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.coloritslfbrad{
+    margin-top: 270px;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;  
+}
+
+.Text{
+    padding: 20px;
+}
+
+.Title{
+    margin-left: 250px;
+}
+.titlebrand{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 250px;
+}
+
+
   .hidden{
     visibility: hidden;
   }
@@ -203,9 +239,18 @@ body{
     height: 150px; 
 }
 
-#app{
+#app {
     position: absolute;
-    margin-top:  500px;
+    margin-top:60px;
+    margin-left:90px;
+    width: 70%;
+   
+}
+
+#app1{
+    margin-top:5px;
+    margin-left: 50px;
+    visibility: visible;
 }
 
 

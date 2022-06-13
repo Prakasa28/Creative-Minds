@@ -227,8 +227,13 @@ function Show_Intro(){
  function Show_Color(){
      const Color = document.querySelector('.ColorPallete');
      const Intro = document.querySelector('.Introduction');
+     const app = document.querySelector('#app');
+     const app1 = document.querySelector('#app1');
+
      Intro.style.visibility = 'hidden';
      Color.style.visibility = 'visible';
+     app.style.visibility = 'hidden';
+     app1.style.visibility = 'hidden';
  }
 //
 // function Change_Pallete_1(){
