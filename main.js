@@ -143,6 +143,25 @@ SmartBlock.Editor('#app', {
   }
 });
 
+function changeFunc() {
+  var selectBox = document.getElementById("selecth1FontFamily");
+  var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  asd.style.fontFamily = selectedValue;
+  localStorage.font = selectedValue;
+ }
+
+var selector = document.getElementById('selecth1FontFamily');
+var asd = document.getElementById('edit');
+
+if (localStorage.length != 0) {
+    asd.style.fontFamily = localStorage.font;
+    asd.value = localStorage.font;
+}else{
+    localStorage.setItem('font', '');
+}
+
+
+
 
 
 

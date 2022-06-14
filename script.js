@@ -40,7 +40,7 @@ target_pal_6_start = document.getElementsByClassName('Color_6');
 for (var i = 0; i < target_pal_6_start.length; i++) {
   target_pal_6_start[i].style.backgroundColor = pal_6_start;
 }
-target_background_start = document.getElementsByClassName('content');
+target_background_start = document.getElementsByClassName('content1');
 for (var i = 0; i < target_background_start.length; i++) {
   target_background_start[i].style.backgroundColor = background_start;
 }
@@ -220,8 +220,14 @@ function Change_Color(){
 function Show_Intro(){
    const Intro = document.querySelector('.Introduction');
    const Color = document.querySelector('.ColorPallete');
+   const app = document.querySelector('#app');
+   const app1 = document.querySelector('#app1');
+   const typo = document.querySelector('#fontchange');
    Color.style.visibility = 'hidden';
    Intro.style.visibility = 'visible';
+   app.style.visibility = 'visible';
+   app1.style.visibility = 'visible';
+   typo.style.visibility = 'hidden';
 
  }
  function Show_Color(){
@@ -229,12 +235,28 @@ function Show_Intro(){
      const Intro = document.querySelector('.Introduction');
      const app = document.querySelector('#app');
      const app1 = document.querySelector('#app1');
+     const typo = document.querySelector('#fontchange');
 
      Intro.style.visibility = 'hidden';
      Color.style.visibility = 'visible';
      app.style.visibility = 'hidden';
      app1.style.visibility = 'hidden';
+     typo.style.visibility = 'hidden';
  }
+
+ function Show_typography(){
+  const Color = document.querySelector('.ColorPallete');
+  const Intro = document.querySelector('.Introduction');
+  const app = document.querySelector('#app');
+  const app1 = document.querySelector('#app1');
+  const typo = document.querySelector('#fontchange');
+
+  Intro.style.visibility = 'hidden';
+  Color.style.visibility = 'hidden';
+  app.style.visibility = 'hidden';
+  app1.style.visibility = 'hidden';
+  typo.style.visibility = 'visible';
+}
 //
 // function Change_Pallete_1(){
 //   color_picked = Pallete_1_id.value;
