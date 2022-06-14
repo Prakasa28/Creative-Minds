@@ -67,6 +67,7 @@
           <button  class="button-7 removebtn"  onclick="myFunction()">Remove</button>
           <button class="applybtn button-7" onclick="dragdrop()" ondblclick="saveChanges()">Apply</button>
         </div>
+        
       </div>
 
       <div class="container">
@@ -77,6 +78,13 @@
         </header>
         <input type="file" id="logoUpload" />
         
+        <div class="hover-container">
+          <p class="hover-target" tabindex="0"><i class="fas fa-question-circle"></i></p>
+          <aside class="hover-popup">
+            <h2>Information Bubble</h2>
+            <p>Click edit icon near logo to change the logo, the sidebar items canbe sorted by dragging up and down, click on demo to change the menu item name, click the plus icon to add a new sidebar element and click remove button to remove it, click apply to save all the changes</p>
+          </aside>
+        </div>
         
         <div id="fontchange">
           <!-- <input type="file" id="imageUpload"/>
@@ -132,6 +140,7 @@
             />
             <input class="effect-8" type="text" id="para" name="para"  placeholder="Intro Paragraph"  />
             <input  class="button-7" type="submit" onclick="handleSubmit()" />
+            
           </div>
         </div>
          
@@ -189,8 +198,10 @@
             </div>
           </div>
           
-          </div>
+         </div>
          
+       
+
           <div id="app" class="Title1" >
           </div>
           <button class="button-7" id="app1" onclick="app()">Save Changes</button>

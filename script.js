@@ -223,11 +223,14 @@ function Show_Intro(){
    const app = document.querySelector('#app');
    const app1 = document.querySelector('#app1');
    const typo = document.querySelector('#fontchange');
+   const infobubble = document.querySelector('.hover-container');
+
    Color.style.visibility = 'hidden';
    Intro.style.visibility = 'visible';
    app.style.visibility = 'visible';
    app1.style.visibility = 'visible';
    typo.style.visibility = 'hidden';
+   infobubble.style.visibility = 'visible';
 
  }
  function Show_Color(){
@@ -236,12 +239,14 @@ function Show_Intro(){
      const app = document.querySelector('#app');
      const app1 = document.querySelector('#app1');
      const typo = document.querySelector('#fontchange');
+     const infobubble = document.querySelector('.hover-container');
 
      Intro.style.visibility = 'hidden';
      Color.style.visibility = 'visible';
      app.style.visibility = 'hidden';
      app1.style.visibility = 'hidden';
      typo.style.visibility = 'hidden';
+     infobubble.style.visibility = 'hidden';
  }
 
  function Show_typography(){
@@ -250,12 +255,14 @@ function Show_Intro(){
   const app = document.querySelector('#app');
   const app1 = document.querySelector('#app1');
   const typo = document.querySelector('#fontchange');
+  const infobubble = document.querySelector('.hover-container');
 
   Intro.style.visibility = 'hidden';
   Color.style.visibility = 'hidden';
   app.style.visibility = 'hidden';
   app1.style.visibility = 'hidden';
   typo.style.visibility = 'visible';
+  infobubble.style.visibility = 'hidden';
 }
 //
 // function Change_Pallete_1(){
