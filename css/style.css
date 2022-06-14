@@ -51,14 +51,6 @@ body{
     height: 128px;
     border-bottom: 1px solid #000000;
 }
-#Login{
-    margin-left: 50px;
-}
-#account{
-    width: 40px;
-    padding: 20px;
-    float: left;
-}
 
 .content{
     display: grid;
