@@ -24,6 +24,11 @@ body{
     border-right: 1px solid #756f68;
     position: fixed; 
 
+
+}
+
+.Sidebar_menu{
+    margin: 0;
 }
 
 .SidebarHeader-logo{

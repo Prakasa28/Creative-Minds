@@ -21,14 +21,14 @@
   <body>
    <span id="edit">
     <div class="layout ">
-      <div class="sidebar Borders">
+      <div class="sidebar Borders ">
         <div class="SidebarHeader-logo Borders">
           <a href=""><img id="logoPreview" src=""  /></a>
           <label for="logoUpload">
             <img class="edit-icon" src="image/editicon.svg" />
           </label>
         </div>
-        <input type="file" id="logoUpload" />
+       
         <!-- <div class="Sidebar_menu" id="sortable">
           <div class="sidebar_item" id="duplicate">Introduction</div>
           <div class="sidebar_item">Logo</div>
@@ -52,8 +52,8 @@
           <li class="sidebar_item Borders" data-arrange="3" onclick="Show_typography()"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Typography</li>
           <li class="sidebar_item Borders" data-arrange="4"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Downloads</li>
         </ul>
-        <div class="sidebar_item Borders" id="duplicate" contenteditable="true">
-          Introduction
+        <div class="sidebar_item Borders" id="duplicate" contenteditable>
+           Demo
         </div>
         <div
           class="sidebarduplicate Borders"
@@ -65,17 +65,17 @@
         </div>
         <div class="sidebarbtns">
           <button  class="button-7 removebtn"  onclick="myFunction()">Remove</button>
-          <button class="applybtn button-7" onclick="dragdrop()">Apply</button>
+          <button class="applybtn button-7" onclick="dragdrop()" ondblclick="saveChanges()">Apply</button>
         </div>
       </div>
 
       <div class="container">
         <header class="Header Borders">
           <h1>Dashboard</h1>
-
+          
           <div  id="google_translate_element" class="google-translate"></div>
         </header>
-        <input type="checkbox">
+        <input type="file" id="logoUpload" />
         
         <div id="fontchange">
           <!-- <input type="file" id="imageUpload"/>
@@ -117,6 +117,8 @@
               value="Save Font Size"
               class="button-7" 
             />
+            <input class="effect-8" type="text" id="head" name="head"  placeholder="Intro Header"  />
+            
             
             <h1 id="intropara">Intro Paragraph</h1>
             <div>Font Size</div>
@@ -187,7 +189,7 @@
           </div>
           
           </div>
-        
+          
           <div id="app" class="Title1" >
           </div>
           <button class="button-7" id="app1" onclick="app()">Save Changes</button>
