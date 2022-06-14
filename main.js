@@ -161,6 +161,56 @@ if (localStorage.length != 0) {
 }
 
 
+var text = document.getElementById('duplicate');
+var myData;
+var postData = window.localStorage.getItem("save");
+// if no data
+if (postData == null || postData == '') {
+    myData = text.innerHTML;
+    // store default value
+    window.localStorage.setItem("save", myData);
+    // make it placeholder style
+    text.classList.remove('changed');
+} else {
+    // if there is a value post it
+    text.innerHTML = postData;
+    // make dark text
+    text.classList.add('changed');
+}
+
+function saveChanges() {
+    // store the current value
+    myData = text.innerHTML;
+    // local store the value
+    window.localStorage.setItem("save", myData);
+    text.classList.add('changed');
+}
+
+// target_borders = document.getElementsByClassName('Borders');
+// var count = 0;
+// function hide_border(){
+//   // var boxvalue = document.getElementById('hideborder').value;
+//   if (count == 0){
+//     count ++;
+//     for (var i = 0; i < target_borders.length; i++) {
+//       target_borders[i].style.border = "solid";
+//       return;
+      
+//     }
+//     if (count ==1){
+//       count --;
+//       for (var i = 0; i < target_border_l_start.length; i++) {
+//         target_borders[i].style.border = "hidden";
+//         return;
+//       }      
+//     }
+
+
+//   }
+//   console.log(count);
+// }
+
+
 /*document.querySelector("#imageUpload").addEventListener("change",function(){
   const reader1 = new FileReader();
 

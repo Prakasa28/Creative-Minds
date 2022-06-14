@@ -24,7 +24,7 @@
           <div class="sidebar_item ">Typography</div>
           <div class="sidebar_item ">Color palette</div>
         </div>
-        <div class="sidebar_item Borders" id="duplicate">Introduction</div>
+        <div class="sidebar_item Borders" id="duplicate">Logo</div>
       </div>
 
       <div class="container content1">
@@ -103,6 +103,22 @@
 var dragdropmenu = localStorage.getItem('dragdropmenu');
 document.getElementById('drop').outerHTML = dragdropmenu ;
 
+var text = document.getElementById('duplicate');
+var myData;
+var postData = window.localStorage.getItem("save");
+// if no data
+if (postData == null || postData == '') {
+    myData = text.innerHTML;
+    // store default value
+    window.localStorage.setItem("save", myData);
+    // make it placeholder style
+    text.classList.remove('changed');
+} else {
+    // if there is a value post it
+    text.innerHTML = postData;
+    // make dark text
+    text.classList.add('changed');
+}
 
 var app2 = localStorage.getItem('app');
 document.getElementById('app4').outerHTML = app2;
