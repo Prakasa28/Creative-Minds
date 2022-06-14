@@ -3,6 +3,7 @@ body{
     margin: 0;
     position: relative;
     
+    
 }
 
 
@@ -11,6 +12,7 @@ body{
     width: 100%;
     min-height: 100vh;
     grid-template-columns: repeat(12,1fr);
+    
 }
 
 .sidebar{
@@ -18,7 +20,7 @@ body{
     width: 16.667vw;
     height: 100vh;
     border-right: 1px solid #756f68;
-    position: fixed;
+    position: fixed; 
 
 }
 
@@ -32,7 +34,7 @@ body{
 
 .ColorPallete{
     position: absolute;
-    margin-top: -400px;
+    margin-top: -500px;
     margin-left: 280px;
   }
 
@@ -47,7 +49,7 @@ body{
 }
 
 .coloritslfbrad{
-    margin-top: 270px;
+    margin-top: 370px;
     width: 700px;
     height: 200px;
     display: flex;
@@ -58,6 +60,8 @@ body{
 
 .Text{
     padding: 20px;
+    mix-blend-mode: difference;
+
 }
 
 .Title{
@@ -65,7 +69,7 @@ body{
 }
 .titlebrand{
     position: absolute;
-    margin-top: 200px;
+    margin-top: 300px;
     margin-left: 250px;
 }
 
@@ -112,6 +116,7 @@ body{
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
+   cursor: pointer;
 }
 
 .sidebar_button{
@@ -215,6 +220,7 @@ body{
 .content{
     display: grid;
     grid-template-columns: repeat(12,1fr);
+    
 }
 
 .content h1{
@@ -240,9 +246,9 @@ body{
 }
 
 #app {
-    position: absolute;
+    position: relative;
     margin-top:60px;
-    margin-left:90px;
+    margin-left:120px;
     width: 70%;
    
 }
@@ -253,4 +259,64 @@ body{
     visibility: visible;
 }
 
+#fontchange{
+    visibility: hidden;
+    float: right;
+   
+}
+
+
+
+
+
+
+/* CSS */
+.button-7 {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin: 10px;
+}
+
+.button-7:hover,
+.button-7:focus {
+  background-color: #07c;
+}
+
+.button-7:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-7:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+
+.effect-8{border: 1px solid #ccc; padding: 7px 14px 9px;}
+
+.introdash{
+    margin-left: 200px;
+}
+ 
 
