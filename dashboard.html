@@ -21,9 +21,9 @@
   <body>
    <span id="edit">
     <div class="layout ">
-      <div class="sidebar">
-        <div class="SidebarHeader-logo">
-          <a href=""><img id="logoPreview" src="image/logo.jpeg" alt="" /></a>
+      <div class="sidebar Borders">
+        <div class="SidebarHeader-logo Borders">
+          <a href=""><img id="logoPreview" src=""  /></a>
           <label for="logoUpload">
             <img class="edit-icon" src="image/editicon.svg" />
           </label>
@@ -36,27 +36,27 @@
           <div class="sidebar_item">Color palette</div>
         </div> -->
         <ul id="sortable" class="Sidebar_menu">
-          <li class="sidebar_item" data-arrange="1" type="button"
+          <li class="sidebar_item Borders" data-arrange="1" type="button"
           name="Intro_btn"
           class="sidebar_button"
           onclick="Show_Intro()"
           >
           <i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i> Introduction
           </li>
-          <li class="sidebar_item" data-arrange="2"  type="button"
+          <li class="sidebar_item Borders" data-arrange="2"  type="button"
           name="Color_btn"
           class="sidebar_button"
           onclick="Show_Color()">
           <i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Color palette
           </li>
-          <li class="sidebar_item" data-arrange="3" onclick="Show_typography()"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Typography</li>
-          <li class="sidebar_item" data-arrange="4"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Downloads</li>
+          <li class="sidebar_item Borders" data-arrange="3" onclick="Show_typography()"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Typography</li>
+          <li class="sidebar_item Borders" data-arrange="4"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Downloads</li>
         </ul>
-        <div class="sidebar_item" id="duplicate">
+        <div class="sidebar_item Borders" id="duplicate" contenteditable="true">
           Introduction
         </div>
         <div
-          class="sidebarduplicate"
+          class="sidebarduplicate Borders"
           id="copy"
           value="Make Copy"
           onclick="copy()"
@@ -70,12 +70,16 @@
       </div>
 
       <div class="container">
-        <header class="Header">
+        <header class="Header Borders">
           <h1>Dashboard</h1>
 
           <div  id="google_translate_element" class="google-translate"></div>
         </header>
+        <input type="checkbox">
+        
         <div id="fontchange">
+          <!-- <input type="file" id="imageUpload"/>
+          <img id="imagePreview" src="" /> -->
           <select class="effect-8" id="selecth1FontFamily" >
             <option>Georgia</option>
             <option>Palatino Linotype</option>
@@ -98,6 +102,8 @@
           
           </select>
           <button class="button-7" onclick="changeFunc()">save Font</button>  
+
+
         </div>
 
         <div class="content Introduction introdash">
@@ -129,7 +135,7 @@
     
 
           <div class="hidden ColorPallete">
-            <h1 class="Title">Color Palette</h1>
+            <h1 class="Title Title1">Color Palette</h1>
             <div class="colorinput">
             <select class="effect-8" name="selector" id="Selector" class="selector">
               <option value="Pallete_1">Palette 1</option>
@@ -161,28 +167,28 @@
           </div>
           <div class="coloritslf">
             <div class="Colors Color_1">
-              <h4 class="Text">Pallete 1</h4>
+              <h4 class="Text1">Pallete 1</h4>
             </div>
             <div class="Colors Color_2">
-              <h4 class="Text">Pallete 2</h4>
+              <h4 class="Text1">Pallete 2</h4>
             </div>
             <div class="Colors Color_3">
-              <h4 class="Text">Pallete 3</h4>
+              <h4 class="Text1">Pallete 3</h4>
             </div>
             <div class="Colors Color_4">
-              <h4 class="Text">Pallete 4</h4>
+              <h4 class="Text1">Pallete 4</h4>
             </div>
             <div class="Colors Color_5">
-              <h4 class="Text">Pallete 5</h4>
+              <h4 class="Text1">Pallete 5</h4>
             </div>
             <div class="Colors Color_6">
-              <h4 class="Text">Pallete 6</h4>
+              <h4 class="Text1">Pallete 6</h4>
             </div>
           </div>
           
           </div>
         
-          <div id="app" >
+          <div id="app" class="Title1" >
           </div>
           <button class="button-7" id="app1" onclick="app()">Save Changes</button>
 

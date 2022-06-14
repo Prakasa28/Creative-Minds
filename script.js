@@ -44,11 +44,11 @@ target_background_start = document.getElementsByClassName('content1');
 for (var i = 0; i < target_background_start.length; i++) {
   target_background_start[i].style.backgroundColor = background_start;
 }
-target_font_start = document.getElementsByClassName('Text');
+target_font_start = document.getElementsByClassName('Text1');
 for (var i = 0; i < target_font_start.length; i++) {
   target_font_start[i].style.color = font_start;
 }
-target_title_start = document.getElementsByClassName('Title');
+target_title_start = document.getElementsByClassName('Title1');
 for (var i = 0; i < target_title_start.length; i++) {
   target_title_start[i].style.color = title_start;
 }

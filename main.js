@@ -161,6 +161,28 @@ if (localStorage.length != 0) {
 }
 
 
+/*document.querySelector("#imageUpload").addEventListener("change",function(){
+  const reader1 = new FileReader();
+
+  reader1.addEventListener("load",() => {
+    localStorage.setItem("brand-image",reader1.result);
+  });
+
+  reader1.readAsDataURL(this.files[0]);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const recentImageDataUrl1 = localStorage.getItem("brand-image");
+
+  if (recentImageDataUrl1){
+      document
+      .querySelector("#imagePreview")
+      .setAttribute("scr", recentImageDataUrl1);
+  }
+});*/
+
+
+
 
 
 
