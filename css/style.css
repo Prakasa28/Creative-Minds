@@ -329,6 +329,14 @@ body{
 .introdash{
     margin-left: 200px;
 }
+
+.previewbarndguide{
+    margin-left: 10px;
+}
  
+.previewbarndguide a{
+  text-decoration: none;
+  color: white;
+}
 
 
