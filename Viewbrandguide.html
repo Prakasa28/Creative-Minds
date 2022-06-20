@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <title>Creative Minds</title>
+  </head>
+  <body>
+   <span id="edit">
+    <div class="layout content1 ">
+      <div class="sidebar Borders Title1 ">
+        <div class="SidebarHeader-logo Borders">
+          <a href=""><img id="logoPreview" src="image/logo.jpeg" alt="" /></a>
+        </div>
+        <div class="Sidebar_menu" id="drop">
+          
+          <div class="sidebar_item ">Logo</div>
+          <div class="sidebar_item ">Typography</div>
+          <div class="sidebar_item ">Color palette</div>
+        </div>
+        <div class="sidebar_item Borders" id="duplicate">Logo</div>
+      </div>
+
+      <div class="container content1">
+        <header class="Header Borders">
+          <div id="google_translate_element" class="google-translate"></div>
+          <!-- <input type="button" id="copy" value="Make Copy" onclick="copy()">
+                <button onclick="myFunction()">Remove</button> -->
+        </header>
+
+        <div class="content Introduction content1">
+          <div class="introbrand Title1">
+          <h1><span id="introtext" /></h1>
+          <p><span id="intropara"/></p>
+          </div>
+        </div>
+          
+         
+
+        <div class="hidden ColorPallete ">
+          <h1 class="Title titlebrand Title1">Color Palette</h1>
+          <div class="coloritslfbrad content1">
+          <div class="Colors Color_1">
+            <h4 class="Text1">Pallete 1</h4>
+          </div>
+          <div class="Colors Color_2">
+            <h4 class="Text1">Pallete 2</h4>
+          </div>
+          <div class="Colors Color_3">
+            <h4 class="Text1">Pallete 3</h4>
+          </div>
+          <div class="Colors Color_4">
+            <h4 class="Text1">Pallete 4</h4>
+          </div>
+          <div class="Colors Color_5">
+            <h4 class="Text1">Pallete 5</h4>
+          </div>
+          <div class="Colors Color_6">
+            <h4 class="Text1">Pallete 6</h4>
+          </div>
+        </div>
+
+        </div>
+         <div id="app4" class="content1 Title1 ">
+        </div>
+       
+        <footer class="footer content1"></footer>
+      </div>
+    </div>
+  </span> 
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en", includedLanguages: "en,nl" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const logoImageDataUrl = localStorage.getItem("logo-image");
+
+        if (logoImageDataUrl) {
+          document
+            .querySelector("#logoPreview")
+            .setAttribute("src", logoImageDataUrl);
+        }
+      });
+
+      window.addEventListener('load' ,() =>{
+
+var dragdropmenu = localStorage.getItem('dragdropmenu');
+document.getElementById('drop').outerHTML = dragdropmenu ;
+
+var text = document.getElementById('duplicate');
+var myData;
+var postData = window.localStorage.getItem("save");
+// if no data
+if (postData == null || postData == '') {
+    myData = text.innerHTML;
+    // store default value
+    window.localStorage.setItem("save", myData);
+    // make it placeholder style
+    text.classList.remove('changed');
+} else {
+    // if there is a value post it
+    text.innerHTML = postData;
+    // make dark text
+    text.classList.add('changed');
+}
+
+var app2 = localStorage.getItem('app');
+document.getElementById('app4').outerHTML = app2;
+
+if(localStorage.getItem('output')) {
+  var storedSize = localStorage.getItem('output');
+ document.getElementById("introtext").style.fontSize =  storedSize;
+}
+
+if(localStorage.getItem('outputp')) {
+  var storedSize = localStorage.getItem('outputp');
+ document.getElementById("intropara").style.fontSize =  storedSize;
+}
+
+if (localStorage.getItem('INTROH1') !== null) {
+    const introh1 = localStorage.getItem("INTROH1");
+    const introp1 = localStorage.getItem("INTROP1");
+  
+    document.getElementById("introtext").innerHTML = introh1;
+    document.getElementById("intropara").innerHTML = introp1;
+  } else {
+    console.log("its not there");
+  }
+
+  var selector = document.getElementById('selecth1FontFamily');
+var asd = document.getElementById('edit');
+
+  if (localStorage.length != 0) {
+    asd.style.fontFamily = localStorage.font;
+    asd.value = localStorage.font;
+}else{
+    localStorage.setItem('font', '');
+}
+
+})
+
+    </script>
+  </body>
+</html>
